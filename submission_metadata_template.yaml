@@ -1,0 +1,75 @@
+# Redrob Hackathon — Submission Metadata Template
+#
+# Copy this file to your repo root as `submission_metadata.yaml` and fill it in.
+# The fields here should match what you submit via the portal at upload time.
+# Stage 3 review uses this file to verify your portal metadata.
+
+# ============================================================================
+# Team identity
+# ============================================================================
+team_name: "Next-Gen Thinkers"
+
+primary_contact:
+  name: "KONDURU MUNI DURGA DEVI"
+  email: "munidurgadevik@gmail.com"
+  phone: "+91-9581603697"
+
+team_members:
+  - name: "KONDURU MUNI DURGA DEVI"
+    email: "munidurgadevik@gmail.com"
+    role: "team lead"
+    
+  - name: "Bollipalli Sahithi"
+    email: "bollipallisahithi@gmail.com"
+    role: "team member"
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+github_repo: "https://github.com/Munidurgadevi/rs"
+sandbox_link: "https://codesandbox.io/p/sandbox/github/Munidurgadevi/rs"
+replit     : "https://rs--munidurgadevik.replit.app/"
+reproduce_command: "py fast_rank.py --candidates ./candidates.jsonl.gz --out ./team_id.csv"
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+compute:
+  platform: "MacBook Pro M2"                    # Or: "AWS EC2 c5.4xlarge", "Local Linux box", etc.
+  cpu_cores: 8                                  # Number of CPU cores used
+  ram_gb: 16                                    # Available RAM in GB
+  python_version: "3.11.3"                      # python --version
+  os: "macOS 14.2"                              # Or "Ubuntu 22.04 LTS", etc.
+  uses_gpu_for_inference: false                 # Must be false — see compute constraints
+  has_network_during_ranking: false             # Must be false — no API calls during ranking
+  pre_computation_required: false               # true if you pre-compute embeddings or train models offline
+  pre_computation_time_minutes: 0               # Approximate, if applicable
+
+# ============================================================================
+# AI tools declaration
+# ============================================================================
+# Transparency only — declared use is NOT penalized. Be honest. Stage 5 interview
+# may verify these declarations against your code; declarations that contradict
+# your code or your interview are flagged.
+ai_tools_used:
+  - "Claude"        
+  - "GitHub Copilot"  
+  
+
+ai_usage_summary: |
+  Used Claude for architectural discussion, code review, and debugging.
+  Used GitHub Copilot for autocomplete. No candidate data was fed to any LLM.
+
+
+methodology_summary: |
+ 
+Our solution is an AI-powered candidate ranking system designed to identify the most suitable candidates for a given Job Description. The system begins by processing the Job Description to understand its key requirements and loads candidate profiles from the dataset for evaluation. Each candidate is analyzed using semantic similarity, skill relevance, production AI/ML experience, company quality, and Redrob behavioral signals to determine overall suitability. To improve ranking quality, the system applies disqualification gates that identify incomplete, inconsistent, or suspicious profiles and assign appropriate score penalties. All evaluation signals are normalized and combined using a weighted heuristic scoring mechanism to generate a final candidate score. The system also produces explainable reasoning for every ranked candidate using only verified profile information, ensuring transparency and preventing unsupported justifications. Finally, candidates are ranked in descending order based on their final scores, and the Top 100 candidates are exported to a CSV file. The modular architecture ensures scalability, maintainability, explainability, and efficient candidate ranking while complying with the challenge constraints of no network access during ranking and no use of external APIs.
+# ============================================================================
+# Declarations
+# ============================================================================
+declarations:
+  read_submission_spec: true     # I have read submission_spec.md in full
+  code_is_original_work: true    # My code is my team's original work (using AI as a tool is fine)
+  no_collusion: true             # I have not coordinated my submission with other teams
+  honeypot_check_done: true      # Set to true after you explicitly verify 0% honeypots in top 100
+  reproduction_tested: true      # I have tested that my reproduce_command runs end-to-end

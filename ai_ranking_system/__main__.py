@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Entry point for: python -m ai_ranking_system.rank --candidates ./candidates.jsonl --out ./submission.csv
+Entry point for: python -m ai_ranking_system.rank --candidates ./candidates.jsonl --out ./Next_Gen_Thinkers.csv   
 """
 if __name__ == '__main__':
     from .rank import main

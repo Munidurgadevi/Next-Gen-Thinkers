@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 AI Candidate Discovery & Ranking System - Main Entry Point.
-Run: python -m ai_ranking_system.rank --candidates ./candidates.jsonl --out ./submission.csv
+Run: python -m ai_ranking_system.rank --candidates ./candidates.jsonl --out ./Next_Gen_Thinkers.csv   
 """
 
 import argparse

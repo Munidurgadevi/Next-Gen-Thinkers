@@ -28,7 +28,7 @@ team_members:
 # ============================================================================
 github_repo: "https://github.com/Munidurgadevi/Next-Gen-Thinkers"
 sandbox_link: "https://codesandbox.io/p/sandbox/github/Munidurgadevi/Next-Gen-Thinkers"
-replit     : "https://next-gen-thinkers--munidurgadevikd.replit.app/
+replit     : "https://next-gen-thinkers--munidurgadevikd.replit.app/"
 reproduce_command: "py fast_rank.py --candidates ./candidates.jsonl.gz --out ./Next_Gen_Thinkers.csv" 
 # The single command that produces Next_Gen_Thinkers.csv from candidates.jsonl.gz.
 
